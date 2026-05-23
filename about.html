@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>
+    if (window.location.hostname.includes('surge.sh')) {
+      window.location.replace('https://sayan-fitness.vercel.app/about.html');
+    }
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Primary SEO Meta Tags -->
+  <title>About Us — Sayan Fitness Studio | Kovilambakkam, Chennai</title>
+  <meta name="description" content="Discover Sayan Fitness Studio, Kovilambakkam's premier strength training and conditioning club. Certified coaches, advanced setup, and a dedicated community.">
+  
+  <!-- Tab Icon (Pulsing Lightning Bolt Emoji SVG) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+  
+  <style>
+    .subpage-hero {
+      padding-top: 160px;
+      padding-bottom: 60px;
+      text-align: center;
+      position: relative;
+    }
+    .subpage-hero::before {
+      content: '';
+      position: absolute;
+      top: -10%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 600px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(var(--accent-lime-rgb), 0.08) 0%, transparent 70%);
+      z-index: -1;
+      pointer-events: none;
+    }
+    .about-story {
+      padding: 60px 0;
+    }
+    .story-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+    }
+    .story-content h2 {
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+    }
+    .story-content p {
+      color: var(--text-secondary);
+      margin-bottom: 20px;
+      font-size: 1.05rem;
+    }
+    .features-list {
+      margin-top: 24px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .feature-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+    .feature-item::before {
+      content: '⚡';
+      color: var(--accent-lime);
+    }
+    .team-section {
+      padding: 80px 0;
+      background-color: var(--bg-secondary);
+      border-top: 1px solid var(--glass-border);
+      border-bottom: 1px solid var(--glass-border);
+    }
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      margin-top: 48px;
+    }
+    .member-card {
+      padding: 32px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: var(--transition-normal);
+    }
+    .member-card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(var(--accent-lime-rgb), 0.25);
+    }
+    .member-photo {
+      width: 120px;
+      height: 120px;
+      background: linear-gradient(135deg, var(--bg-tertiary) 0%, rgba(var(--accent-lime-rgb), 0.15) 100%);
+      border: 2.5px solid var(--accent-lime);
+      border-radius: var(--radius-full);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3.5rem;
+      margin-bottom: 20px;
+    }
+    .member-card h3 {
+      font-size: 1.3rem;
+      margin-bottom: 4px;
+    }
+    .member-card .role {
+      color: var(--accent-lime);
+      font-weight: 700;
+      font-family: var(--font-headings);
+      text-transform: uppercase;
+      font-size: 0.9rem;
+      margin-bottom: 12px;
+    }
+    .member-card p {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==========================================
+       HEADER & NAVIGATION
+       ========================================== -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="logo">
+        ⚡ Sayan <span>Fitness</span>
+      </a>
+      
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link active">About Us</a>
+        <a href="programs.html" class="nav-link">Programs</a>
+        <a href="gallery.html" class="nav-link">Gallery</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="index.html#planner" class="btn btn-primary" style="padding: 10px 20px; font-size: 0.8rem; border-radius: var(--radius-sm);">Claim Free Pass</a>
+      </nav>
+      
+      <button class="menu-toggle" aria-label="Toggle Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ==========================================
+       SUBPAGE HERO
+       ========================================== -->
+  <section class="subpage-hero">
+    <div class="container">
+      <span class="section-tag">WHO WE ARE</span>
+      <h1>Our Community & Strength</h1>
+      <p class="calc-subtitle" style="max-width: 600px; margin: 8px auto 0 auto;">Kovilambakkam's premier strength training space for elite conditioning, personal attention, and local community focus.</p>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       ABOUT STORY
+       ========================================== -->
+  <section class="about-story">
+    <div class="container">
+      <div class="story-grid">
+        <div class="story-image glass-card" style="height: 380px; display: flex; align-items: center; justify-content: center; font-size: 6rem; background: linear-gradient(135deg, rgba(var(--accent-lime-rgb), 0.1), rgba(0,0,0,0.4));">
+          🏋️‍♂️⚡
+        </div>
+        <div class="story-content">
+          <span class="section-tag" style="margin-bottom: 12px;">ESTABLISHED 2024</span>
+          <h2>The Journey of Sayan Fitness</h2>
+          <p>Founded on the core belief that local physical spaces should be clean, highly motivating, and exceptionally functional. Sayan Fitness Studio is S. Kolathur's prime community gym, offering a completely customized environment without the intimidation of mass corporate chains.</p>
+          <p>Our layout features professional-grade barbell racks, extensive dumbbells, advanced metabolic runners, and flexibility matrices. Led by dedicated, certified instructors, we provide the ultimate structured paths to realize your peak physical potential.</p>
+          
+          <div class="features-list">
+            <div class="feature-item">Certified Expert Coaches</div>
+            <div class="feature-item">Elite Calisthenics & Strength</div>
+            <div class="feature-item">Premium Group Zumba</div>
+            <div class="feature-item">Community-First Vibe</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       TEAM SECTION
+       ========================================== -->
+  <section class="team-section">
+    <div class="container">
+      <div class="section-header" style="margin-bottom: 0;">
+        <span class="section-tag">ELITE COACHING</span>
+        <h2>Meet Our Certified Instructors</h2>
+        <p>Our trainers design custom plans, correct lifting form, and guide you to success.</p>
+      </div>
+      
+      <div class="team-grid">
+        <!-- Trainer 1 -->
+        <div class="member-card glass-card">
+          <div class="member-photo">🧔</div>
+          <h3>Arjun V.</h3>
+          <span class="role">Strength & Conditioning Head</span>
+          <p>Certified in advanced biomechanics and weight lifting structures. Specializes in progressive overload and Olympic lifting configurations.</p>
+        </div>
+
+        <!-- Trainer 2 -->
+        <div class="member-card glass-card">
+          <div class="member-photo">👱‍♂️</div>
+          <h3>Vikram S.</h3>
+          <span class="role">Core Stability & Calisthenics Lead</span>
+          <p>Expert in core rehabilitation, spinal alignment, functional stabilizer systems, and joint flexibility rehabilitation.</p>
+        </div>
+
+        <!-- Trainer 3 -->
+        <div class="member-card glass-card">
+          <div class="member-photo">🧑‍🎤</div>
+          <h3>Rajesh K.</h3>
+          <span class="role">Zumba & Cardio Specialist</span>
+          <p>Licensed Zumba and cardiovascular dance choreographer with 5+ years of driving energetic, calorie-burning fitness sessions.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       FOOTER
+       ========================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-logo">
+          ⚡ Sayan <span>Fitness</span>
+        </div>
+        <p class="footer-tagline">Elite physical training programs and high-energy community fitness in Kovilambakkam, Chennai.</p>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2026 Sayan Fitness Studio. Crafted locally for Kovilambakkam.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Sticky -->
+  <a href="https://wa.me/919600984227?text=Hi%20Sayan%20Fitness%20Studio!%20I'd%20like%20to%20claim%20my%20Free%201-Day%20Trial%20Pass." target="_blank" class="whatsapp-sticky" style="background-color: #25d366;" aria-label="Chat on WhatsApp">
+    💬
+  </a>
+
+  <!-- JavaScript Toggle -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const menuToggle = document.querySelector('.menu-toggle');
+      const navMenu = document.querySelector('.nav-menu');
+
+      if (menuToggle && navMenu) {
+        menuToggle.addEventListener('click', () => {
+          navMenu.classList.toggle('active');
+          const spans = menuToggle.querySelectorAll('span');
+          if (navMenu.classList.contains('active')) {
+            spans[0].style.transform = 'rotate(45deg) translate(6px, 6px)';
+            spans[1].style.opacity = '0';
+            spans[2].style.transform = 'rotate(-45deg) translate(6px, -6px)';
+          } else {
+            spans[0].style.transform = 'none';
+            spans[1].style.opacity = '1';
+            spans[2].style.transform = 'none';
+          }
+        });
+      }
+    });
+  </script>
+</body>
+</html>

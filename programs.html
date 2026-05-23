@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>
+    if (window.location.hostname.includes('surge.sh')) {
+      window.location.replace('https://sayan-fitness.vercel.app/programs.html');
+    }
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Primary SEO Meta Tags -->
+  <title>Our Programs — Sayan Fitness Studio | Kovilambakkam, Chennai</title>
+  <meta name="description" content="Explore our premium fitness programs. Weight Training, Core Power, Calisthenics, and High-Energy Zumba. Customized fitness pathways at S. Kolathur's best gym.">
+  
+  <!-- Tab Icon (Pulsing Lightning Bolt Emoji SVG) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+  
+  <style>
+    .subpage-hero {
+      padding-top: 160px;
+      padding-bottom: 60px;
+      text-align: center;
+      position: relative;
+    }
+    .subpage-hero::before {
+      content: '';
+      position: absolute;
+      top: -10%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 600px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(var(--accent-lime-rgb), 0.08) 0%, transparent 70%);
+      z-index: -1;
+      pointer-events: none;
+    }
+    .programs-detail {
+      padding: 60px 0;
+    }
+    .detail-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 56px;
+    }
+    .detail-card {
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 40px;
+      padding: 40px;
+      align-items: center;
+    }
+    .detail-card.reverse {
+      grid-template-columns: 1.2fr 0.8fr;
+    }
+    .detail-icon {
+      height: 250px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 6.5rem;
+      background: linear-gradient(135deg, rgba(var(--accent-lime-rgb), 0.08), rgba(0,0,0,0.45));
+      border-radius: var(--radius-md);
+      border: 1px solid var(--glass-border);
+    }
+    .detail-info h3 {
+      font-size: 2rem;
+      margin-bottom: 16px;
+    }
+    .detail-info p {
+      color: var(--text-secondary);
+      font-size: 1.05rem;
+      margin-bottom: 24px;
+      line-height: 1.7;
+    }
+    .detail-features {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 28px;
+    }
+    .detail-features li {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .detail-features li::before {
+      content: '✓';
+      color: var(--accent-lime);
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==========================================
+       HEADER & NAVIGATION
+       ========================================== -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="logo">
+        ⚡ Sayan <span>Fitness</span>
+      </a>
+      
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="programs.html" class="nav-link active">Programs</a>
+        <a href="gallery.html" class="nav-link">Gallery</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="index.html#planner" class="btn btn-primary" style="padding: 10px 20px; font-size: 0.8rem; border-radius: var(--radius-sm);">Claim Free Pass</a>
+      </nav>
+      
+      <button class="menu-toggle" aria-label="Toggle Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ==========================================
+       SUBPAGE HERO
+       ========================================== -->
+  <section class="subpage-hero">
+    <div class="container">
+      <span class="section-tag">FITNESS PATHWAYS</span>
+      <h1>Our Premium Programs</h1>
+      <p class="calc-subtitle" style="max-width: 600px; margin: 8px auto 0 auto;">Curated conditioning splits, top-tier lifting gear, and dynamic aerobics for Kovilambakkam's community.</p>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       PROGRAMS DETAIL
+       ========================================== -->
+  <section class="programs-detail">
+    <div class="container">
+      <div class="detail-grid">
+        
+        <!-- Program 1: Strength -->
+        <div class="detail-card glass-card">
+          <div class="detail-icon">🏋️‍♂️</div>
+          <div class="detail-info">
+            <span class="section-tag">STRENGTH & HYPERTROPHY</span>
+            <h3>Elite Weight Training</h3>
+            <p>Formulate powerful muscle volume, physical durability, and maximum raw power. We utilize high-tier Olympic barbells, complete structural plate loaders, multi-press systems, and custom progressive split structures—fully directed under experienced supervision.</p>
+            <ul class="detail-features">
+              <li>Biomechanical lifting guidance</li>
+              <li>Hypertrophy splits & tracking</li>
+              <li>Olympic barbell setup</li>
+              <li>Targeted density progressions</li>
+            </ul>
+            <a href="index.html#planner" class="btn btn-primary">Calculate Target Metric</a>
+          </div>
+        </div>
+
+        <!-- Program 2: Core & Flexibility -->
+        <div class="detail-card glass-card reverse">
+          <div class="detail-info">
+            <span class="section-tag">STABILIZATION & POWER</span>
+            <h3>Core & Flexibility Power</h3>
+            <p>Target the core stabilization systems, align dynamic postures, and build physical flexibility. Combining high-intensity core sets, spinal alignment mechanics, and deep muscle elongations, this scheme maximizes full-body mobility and protects joint health.</p>
+            <ul class="detail-features">
+              <li>Lower back & stabilizer training</li>
+              <li>Functional flexibility maps</li>
+              <li>Spinal alignment corrections</li>
+              <li>Mobility & injury prevention</li>
+            </ul>
+            <a href="index.html#planner" class="btn btn-primary">Find Your Program</a>
+          </div>
+          <div class="detail-icon">🧘‍♂️</div>
+        </div>
+
+        <!-- Program 3: Zumba -->
+        <div class="detail-card glass-card">
+          <div class="detail-icon">💃</div>
+          <div class="detail-info">
+            <span class="section-tag">VIBRANT CARDIO BURN</span>
+            <h3>Zumba & Aerobics Dance</h3>
+            <p>Shred caloric deposits, skyrocket cardiovascular endurance, and feel the high-energy flow in a massive, collaborative studio class. Orchestrated by specialized choreographers, we mix high-tempo beats with muscle-toning cardiovascular routines.</p>
+            <ul class="detail-features">
+              <li>Explosive calorie expenditure</li>
+              <li>Vibrant community group sessions</li>
+              <li>Functional aerobic conditioning</li>
+              <li>Coordination & endurance gains</li>
+            </ul>
+            <a href="index.html#planner" class="btn btn-primary">Claim Free Trial Pass</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       FOOTER
+       ========================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-logo">
+          ⚡ Sayan <span>Fitness</span>
+        </div>
+        <p class="footer-tagline">Elite physical training programs and high-energy community fitness in Kovilambakkam, Chennai.</p>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2026 Sayan Fitness Studio. Crafted locally for Kovilambakkam.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Sticky -->
+  <a href="https://wa.me/919600984227?text=Hi%20Sayan%20Fitness%20Studio!%20I'd%20like%20to%20claim%20my%20Free%201-Day%20Trial%20Pass." target="_blank" class="whatsapp-sticky" style="background-color: #25d366;" aria-label="Chat on WhatsApp">
+    💬
+  </a>
+
+  <!-- JavaScript Toggle -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const menuToggle = document.querySelector('.menu-toggle');
+      const navMenu = document.querySelector('.nav-menu');
+
+      if (menuToggle && navMenu) {
+        menuToggle.addEventListener('click', () => {
+          navMenu.classList.toggle('active');
+          const spans = menuToggle.querySelectorAll('span');
+          if (navMenu.classList.contains('active')) {
+            spans[0].style.transform = 'rotate(45deg) translate(6px, 6px)';
+            spans[1].style.opacity = '0';
+            spans[2].style.transform = 'rotate(-45deg) translate(6px, -6px)';
+          } else {
+            spans[0].style.transform = 'none';
+            spans[1].style.opacity = '1';
+            spans[2].style.transform = 'none';
+          }
+        });
+      }
+    });
+  </script>
+</body>
+</html>

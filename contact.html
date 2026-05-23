@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>
+    if (window.location.hostname.includes('surge.sh')) {
+      window.location.replace('https://sayan-fitness.vercel.app/contact.html');
+    }
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Primary SEO Meta Tags -->
+  <title>Contact Us — Sayan Fitness Studio | Kovilambakkam, Chennai</title>
+  <meta name="description" content="Reach out to Sayan Fitness Studio. Book a trial pass, view our studio location behind Zone Hotel, or contact our trainers.">
+  
+  <!-- Tab Icon (Pulsing Lightning Bolt Emoji SVG) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+  
+  <style>
+    .subpage-hero {
+      padding-top: 160px;
+      padding-bottom: 60px;
+      text-align: center;
+      position: relative;
+    }
+    .subpage-hero::before {
+      content: '';
+      position: absolute;
+      top: -10%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 600px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(var(--accent-lime-rgb), 0.08) 0%, transparent 70%);
+      z-index: -1;
+      pointer-events: none;
+    }
+    .contact-container {
+      display: grid;
+      grid-template-columns: 1fr 1.1fr;
+      gap: 56px;
+      align-items: flex-start;
+      padding-bottom: 80px;
+    }
+    .contact-details {
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+    .contact-card {
+      padding: 24px;
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+    .contact-card .icon {
+      font-size: 2.2rem;
+      color: var(--accent-lime);
+    }
+    .contact-card h4 {
+      font-size: 1.15rem;
+      margin-bottom: 4px;
+    }
+    .contact-card p {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+    }
+    .booking-form {
+      padding: 40px;
+      position: relative;
+    }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 24px;
+      position: relative;
+    }
+    .form-group label {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--text-secondary);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .form-control {
+      width: 100%;
+      background: rgba(0, 0, 0, 0.45);
+      border: 1px solid var(--glass-border);
+      color: var(--text-primary);
+      padding: 15px 18px;
+      border-radius: var(--radius-sm);
+      font-family: var(--font-body);
+      font-size: 1rem;
+      font-weight: 500;
+      transition: var(--transition-fast);
+    }
+    .form-control:focus {
+      outline: none;
+      border-color: var(--accent-lime);
+      box-shadow: 0 0 10px rgba(var(--accent-lime-rgb), 0.18);
+    }
+    .error-msg {
+      color: hsl(0, 100%, 65%);
+      font-size: 0.8rem;
+      margin-top: 4px;
+      display: none;
+    }
+    .form-group.invalid .form-control {
+      border-color: hsl(0, 100%, 60%);
+      background: rgba(255, 0, 0, 0.03);
+    }
+    .form-group.invalid .error-msg {
+      display: block;
+    }
+    .form-group.valid .form-control {
+      border-color: hsl(140, 70%, 45%);
+    }
+    /* Loading overlay */
+    .submit-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(18, 22, 33, 0.95);
+      z-index: 10;
+      border-radius: var(--radius-md);
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      text-align: center;
+      padding: 40px;
+    }
+    .spinner {
+      border: 4px solid rgba(255, 255, 255, 0.08);
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      border-left-color: var(--accent-lime);
+      animation: spin 1s linear infinite;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    .success-icon {
+      font-size: 4rem;
+      color: hsl(140, 70%, 45%);
+      animation: pop 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    @keyframes pop {
+      0% { transform: scale(0); }
+      100% { transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==========================================
+       HEADER & NAVIGATION
+       ========================================== -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="logo">
+        ⚡ Sayan <span>Fitness</span>
+      </a>
+      
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="programs.html" class="nav-link">Programs</a>
+        <a href="gallery.html" class="nav-link">Gallery</a>
+        <a href="contact.html" class="nav-link active">Contact</a>
+        <a href="index.html#planner" class="btn btn-primary" style="padding: 10px 20px; font-size: 0.8rem; border-radius: var(--radius-sm);">Claim Free Pass</a>
+      </nav>
+      
+      <button class="menu-toggle" aria-label="Toggle Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ==========================================
+       SUBPAGE HERO
+       ========================================== -->
+  <section class="subpage-hero">
+    <div class="container">
+      <span class="section-tag">GET IN TOUCH</span>
+      <h1>Outreach & Free Pass Bookings</h1>
+      <p class="calc-subtitle" style="max-width: 600px; margin: 8px auto 0 auto;">Connect with Kovilambakkam's premium fitness studio. Reserve your free trial pass instantly below.</p>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       CONTACT CONTAINER
+       ========================================== -->
+  <div class="container contact-container">
+    
+    <!-- Left: Contact Details -->
+    <div class="contact-details">
+      
+      <div class="contact-card glass-card">
+        <div class="icon">📍</div>
+        <div>
+          <h4>Studio Landmark</h4>
+          <p>Dr. Ambedkar Salai, Ganganagar Extension, Behind Zone Hotel, S. Kolathur, Kovilambakkam, Chennai - 600117.</p>
+        </div>
+      </div>
+
+      <div class="contact-card glass-card">
+        <div class="icon">📞</div>
+        <div>
+          <h4>Phone Hotline</h4>
+          <p>+91 96009 84227 (Call or WhatsApp)</p>
+        </div>
+      </div>
+
+      <div class="contact-card glass-card">
+        <div class="icon">✉️</div>
+        <div>
+          <h4>Email Outreach</h4>
+          <p>outreach@sayanfitness.in</p>
+        </div>
+      </div>
+
+      <div class="contact-card glass-card">
+        <div class="icon">🕒</div>
+        <div>
+          <h4>Gym Schedule</h4>
+          <p>Monday – Saturday: 6:00 AM – 10:00 PM (Sunday Closed)</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Right: Advanced Booking Form -->
+    <div class="booking-form glass-card">
+      
+      <!-- Submission State Overlay -->
+      <div id="submit-overlay" class="submit-overlay">
+        <div id="spinner" class="spinner"></div>
+        <div id="success-icon" class="success-icon" style="display:none;">✔</div>
+        <h3 id="overlay-title" class="text-2xl md:text-3xl font-bold mb-2">Sending Request...</h3>
+        <p id="overlay-desc" class="text-sm text-gray-300">Communicating with the active booking server...</p>
+        <a id="overlay-btn" href="#" class="btn btn-primary" style="display:none; margin-top:16px;">Claim WhatsApp Pass 💬</a>
+      </div>
+
+      <h3 style="font-size: 1.5rem; margin-bottom: 8px;">Claim Your 1-Day Trial Pass</h3>
+      <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 28px;">Fill in your details below. Our team will verify your phone and activate your pass within minutes.</p>
+
+      <form id="contactForm" novalidate>
+        
+        <!-- Field 1: Name -->
+        <div class="form-group" id="name-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" class="form-control" placeholder="Enter your full name" required>
+          <span class="error-msg" id="name-error">Name is required</span>
+        </div>
+
+        <!-- Field 2: Phone -->
+        <div class="form-group" id="phone-group">
+          <label for="phone">Your Mobile Phone</label>
+          <input type="tel" id="phone" class="form-control" placeholder="Enter 10-digit mobile number" required>
+          <span class="error-msg" id="phone-error">Phone number is required</span>
+        </div>
+
+        <!-- Field 3: Program -->
+        <div class="form-group">
+          <label for="program">Select Your Target Program</label>
+          <select id="program" class="form-control" style="background: rgba(0,0,0,0.65); color: var(--text-primary);">
+            <option value="Elite Weight Training">Elite Weight Training 🏋️‍♂️</option>
+            <option value="Core & Flexibility Power">Core & Flexibility Power 🧘‍♂️</option>
+            <option value="Zumba & Aerobics Dance">Zumba & Aerobics Dance 💃</option>
+            <option value="VIP 1-on-1 Personal Training">VIP 1-on-1 Personal Training 👑</option>
+          </select>
+        </div>
+
+        <!-- Button -->
+        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 12px; font-weight: 800;">
+          Submit Booking Request 🚀
+        </button>
+
+      </form>
+    </div>
+
+  </div>
+
+  <!-- ==========================================
+       FOOTER
+       ========================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-logo">
+          ⚡ Sayan <span>Fitness</span>
+        </div>
+        <p class="footer-tagline">Elite physical training programs and high-energy community fitness in Kovilambakkam, Chennai.</p>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2026 Sayan Fitness Studio. Crafted locally for Kovilambakkam.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Sticky -->
+  <a href="https://wa.me/919600984227?text=Hi%20Sayan%20Fitness%20Studio!%20I'd%20like%20to%20claim%20my%20Free%201-Day%20Trial%20Pass." target="_blank" class="whatsapp-sticky" style="background-color: #25d366;" aria-label="Chat on WhatsApp">
+    💬
+  </a>
+
+  <!-- JavaScript Validation and Navbar Toggle -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Mobile Navbar Toggle
+      const menuToggle = document.querySelector('.menu-toggle');
+      const navMenu = document.querySelector('.nav-menu');
+
+      if (menuToggle && navMenu) {
+        menuToggle.addEventListener('click', () => {
+          navMenu.classList.toggle('active');
+          const spans = menuToggle.querySelectorAll('span');
+          if (navMenu.classList.contains('active')) {
+            spans[0].style.transform = 'rotate(45deg) translate(6px, 6px)';
+            spans[1].style.opacity = '0';
+            spans[2].style.transform = 'rotate(-45deg) translate(6px, -6px)';
+          } else {
+            spans[0].style.transform = 'none';
+            spans[1].style.opacity = '1';
+            spans[2].style.transform = 'none';
+          }
+        });
+      }
+
+      // Advanced Form Validation
+      const form = document.getElementById('contactForm');
+      const nameInput = document.getElementById('name');
+      const phoneInput = document.getElementById('phone');
+      const programSelect = document.getElementById('program');
+
+      const nameGroup = document.getElementById('name-group');
+      const phoneGroup = document.getElementById('phone-group');
+      const nameError = document.getElementById('name-error');
+      const phoneError = document.getElementById('phone-error');
+
+      const overlay = document.getElementById('submit-overlay');
+      const spinner = document.getElementById('spinner');
+      const successIcon = document.getElementById('success-icon');
+      const overlayTitle = document.getElementById('overlay-title');
+      const overlayDesc = document.getElementById('overlay-desc');
+      const overlayBtn = document.getElementById('overlay-btn');
+
+      // Realtime validation
+      nameInput.addEventListener('input', validateName);
+      phoneInput.addEventListener('input', validatePhone);
+
+      function validateName() {
+        const val = nameInput.value.trim();
+        if (val === '') {
+          nameGroup.className = 'form-group invalid';
+          nameError.textContent = 'Name is required';
+          return false;
+        } else if (val.length < 3) {
+          nameGroup.className = 'form-group invalid';
+          nameError.textContent = 'Name must be at least 3 characters';
+          return false;
+        } else {
+          nameGroup.className = 'form-group valid';
+          return true;
+        }
+      }
+
+      function validatePhone() {
+        const val = phoneInput.value.trim();
+        const phoneRegex = /^[6-9]\d{9}$/; // 10 digits starting with 6-9
+        
+        if (val === '') {
+          phoneGroup.className = 'form-group invalid';
+          phoneError.textContent = 'Phone number is required';
+          return false;
+        } else if (!phoneRegex.test(val)) {
+          phoneGroup.className = 'form-group invalid';
+          phoneError.textContent = 'Phone must be 10 digits and start with 6-9';
+          return false;
+        } else {
+          phoneGroup.className = 'form-group valid';
+          return true;
+        }
+      }
+
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        const isNameValid = validateName();
+        const isPhoneValid = validatePhone();
+
+        if (isNameValid && isPhoneValid) {
+          // Show Loading Overlay
+          overlay.style.display = 'flex';
+          spinner.style.display = 'block';
+          successIcon.style.display = 'none';
+          overlayTitle.textContent = 'Sending Request...';
+          overlayDesc.textContent = 'Communicating with the active booking server...';
+          overlayBtn.style.display = 'none';
+
+          // Simulate API call
+          setTimeout(() => {
+            spinner.style.display = 'none';
+            successIcon.style.display = 'block';
+            overlayTitle.textContent = 'Form Submitted Successfully!';
+            overlayDesc.textContent = 'Congratulations! Your free trial pass has been registered.';
+            
+            // Build WhatsApp Redirect link
+            const waPhone = "919600984227";
+            const waMsg = `Hi Sayan Fitness Studio! I just submitted your premium booking form.\n\nMy Details:\n- Name: ${nameInput.value}\n- Mobile: ${phoneInput.value}\n- Chosen Program: ${programSelect.value}\n\nPlease activate my Free 1-Day Trial Pass!`;
+            
+            overlayBtn.href = `https://wa.me/${waPhone}?text=${encodeURIComponent(waMsg)}`;
+            overlayBtn.style.display = 'inline-flex';
+            
+            // Clear inputs
+            nameInput.value = '';
+            phoneInput.value = '';
+            nameGroup.className = 'form-group';
+            phoneGroup.className = 'form-group';
+          }, 1500);
+        }
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>
+    if (window.location.hostname.includes('surge.sh')) {
+      window.location.replace('https://sayan-fitness.vercel.app/gallery.html');
+    }
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Primary SEO Meta Tags -->
+  <title>Gallery — Sayan Fitness Studio | Kovilambakkam, Chennai</title>
+  <meta name="description" content="View Sayan Fitness Studio's premium gym facility in Chennai. Experience our strength floor, group workout zones, and elite power racks.">
+  
+  <!-- Tab Icon (Pulsing Lightning Bolt Emoji SVG) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+  
+  <style>
+    .subpage-hero {
+      padding-top: 160px;
+      padding-bottom: 60px;
+      text-align: center;
+      position: relative;
+    }
+    .subpage-hero::before {
+      content: '';
+      position: absolute;
+      top: -10%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 600px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(var(--accent-lime-rgb), 0.08) 0%, transparent 70%);
+      z-index: -1;
+      pointer-events: none;
+    }
+    .gallery-section {
+      padding: 40px 0 80px 0;
+    }
+    .gallery-filters {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      margin-bottom: 48px;
+    }
+    .filter-btn {
+      background: rgba(0, 0, 0, 0.45);
+      border: 1px solid var(--glass-border);
+      color: var(--text-secondary);
+      padding: 10px 24px;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      font-family: var(--font-headings);
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 0.9rem;
+      letter-spacing: 0.05em;
+      transition: var(--transition-fast);
+    }
+    .filter-btn.active, .filter-btn:hover {
+      background: rgba(var(--accent-lime-rgb), 0.08);
+      border-color: var(--accent-lime);
+      color: var(--accent-lime);
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+    .gallery-item {
+      overflow: hidden;
+      position: relative;
+      height: 300px;
+      transition: var(--transition-normal);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 24px;
+      border: 1px solid var(--glass-border);
+      border-radius: var(--radius-md);
+      background-size: cover;
+      background-position: center;
+      box-shadow: var(--shadow-md);
+    }
+    .gallery-item::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 40%, rgba(0,0,0,0.85) 100%);
+      z-index: 1;
+    }
+    .gallery-item:hover {
+      transform: translateY(-6px);
+      border-color: var(--accent-lime);
+      box-shadow: 0 10px 25px rgba(var(--accent-lime-rgb), 0.15);
+    }
+    .gallery-info {
+      position: relative;
+      z-index: 2;
+    }
+    .gallery-info h4 {
+      font-size: 1.25rem;
+      color: var(--text-primary);
+      margin-bottom: 4px;
+    }
+    .gallery-info span {
+      font-size: 0.75rem;
+      color: var(--accent-lime);
+      font-weight: 700;
+      text-transform: uppercase;
+      font-family: var(--font-headings);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==========================================
+       HEADER & NAVIGATION
+       ========================================== -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="logo">
+        ⚡ Sayan <span>Fitness</span>
+      </a>
+      
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="programs.html" class="nav-link">Programs</a>
+        <a href="gallery.html" class="nav-link active">Gallery</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="index.html#planner" class="btn btn-primary" style="padding: 10px 20px; font-size: 0.8rem; border-radius: var(--radius-sm);">Claim Free Pass</a>
+      </nav>
+      
+      <button class="menu-toggle" aria-label="Toggle Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ==========================================
+       SUBPAGE HERO
+       ========================================== -->
+  <section class="subpage-hero">
+    <div class="container">
+      <span class="section-tag">MEDIA OUTREACH</span>
+      <h1>Our Facility & Vibe</h1>
+      <p class="calc-subtitle" style="max-width: 600px; margin: 8px auto 0 auto;">Take a virtual walk inside S. Kolathur's premier strength training floor, cardio arrays, and Zumba dance studios.</p>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       GALLERY SECTION
+       ========================================== -->
+  <section class="gallery-section">
+    <div class="container">
+      
+      <div class="gallery-filters">
+        <button class="filter-btn active" data-filter="all">All Photos</button>
+        <button class="filter-btn" data-filter="strength">Strength Floor</button>
+        <button class="filter-btn" data-filter="cardio">Cardio & HIIT</button>
+        <button class="filter-btn" data-filter="zumba">Zumba & Dance</button>
+      </div>
+
+      <div class="gallery-grid">
+        
+        <!-- Image 1 -->
+        <div class="gallery-item" data-category="strength" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=600');">
+          <div class="gallery-info">
+            <span>Strength & Hypertrophy</span>
+            <h4>Olympic Power Floors</h4>
+          </div>
+        </div>
+
+        <!-- Image 2 -->
+        <div class="gallery-item" data-category="strength" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&q=80&w=600');">
+          <div class="gallery-info">
+            <span>Strength Equipment</span>
+            <h4>Free-Weight Dumbbell Matrix</h4>
+          </div>
+        </div>
+
+        <!-- Image 3 -->
+        <div class="gallery-item" data-category="cardio" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&q=80&w=600');">
+          <div class="gallery-info">
+            <span>Cardio Section</span>
+            <h4>Advanced Treadmill Run Lanes</h4>
+          </div>
+        </div>
+
+        <!-- Image 4 -->
+        <div class="gallery-item" data-category="zumba" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1524594152303-9fd13543dd6e?auto=format&fit=crop&q=80&w=600');">
+          <div class="gallery-info">
+            <span>Cardio Dance</span>
+            <h4>Zumba Fitness Studio</h4>
+          </div>
+        </div>
+
+        <!-- Image 5 -->
+        <div class="gallery-item" data-category="zumba" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&q=80&w=600');">
+          <div class="gallery-info">
+            <span>Group Workout</span>
+            <h4>Cardio Aerobics Stage</h4>
+          </div>
+        </div>
+
+        <!-- Image 6 -->
+        <div class="gallery-item" data-category="cardio" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&q=80&w=600');">
+          <div class="gallery-info">
+            <span>Dynamic HIIT</span>
+            <h4>Kettlebell & Stabilization Area</h4>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       FOOTER
+       ========================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-logo">
+          ⚡ Sayan <span>Fitness</span>
+        </div>
+        <p class="footer-tagline">Elite physical training programs and high-energy community fitness in Kovilambakkam, Chennai.</p>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2026 Sayan Fitness Studio. Crafted locally for Kovilambakkam.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Sticky -->
+  <a href="https://wa.me/919600984227?text=Hi%20Sayan%20Fitness%20Studio!%20I'd%20like%20to%20claim%20my%20Free%201-Day%20Trial%20Pass." target="_blank" class="whatsapp-sticky" style="background-color: #25d366;" aria-label="Chat on WhatsApp">
+    💬
+  </a>
+
+  <!-- JavaScript Filter & Navbar Toggle -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const menuToggle = document.querySelector('.menu-toggle');
+      const navMenu = document.querySelector('.nav-menu');
+
+      if (menuToggle && navMenu) {
+        menuToggle.addEventListener('click', () => {
+          navMenu.classList.toggle('active');
+          const spans = menuToggle.querySelectorAll('span');
+          if (navMenu.classList.contains('active')) {
+            spans[0].style.transform = 'rotate(45deg) translate(6px, 6px)';
+            spans[1].style.opacity = '0';
+            spans[2].style.transform = 'rotate(-45deg) translate(6px, -6px)';
+          } else {
+            spans[0].style.transform = 'none';
+            spans[1].style.opacity = '1';
+            spans[2].style.transform = 'none';
+          }
+        });
+      }
+
+      // Filter Logic
+      const filterButtons = document.querySelectorAll('.filter-btn');
+      const galleryItems = document.querySelectorAll('.gallery-item');
+
+      filterButtons.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          filterButtons.forEach(b => b.classList.remove('active'));
+          e.target.classList.add('active');
+
+          const filterVal = e.target.dataset.filter;
+
+          galleryItems.forEach(item => {
+            if (filterVal === 'all' || item.dataset.category === filterVal) {
+              item.style.display = 'flex';
+            } else {
+              item.style.display = 'none';
+            }
+          });
+        });
+      });
+    });
+  </script>
+</body>
+</html>
