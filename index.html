@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Primary SEO Meta Tags -->
+  <title>Sayan Fitness Studio — Kovilambakkam, Chennai | Premium Gym & Zumba</title>
+  <meta name="description" content="Sayan Fitness Studio is S. Kolathur's premium gym. Join today for elite Weight Training, Core Stabilization, Zumba, and 1-on-1 Personal Training in Chennai.">
+  <meta name="keywords" content="Gym in Kovilambakkam, Fitness Studio S. Kolathur, Zumba Classes Chennai, Weight Training Kovilambakkam, Personal Trainer Chennai">
+  <meta name="author" content="Sayan Fitness Studio">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sayanfitness.in">
+  <meta property="og:title" content="Sayan Fitness Studio — Kovilambakkam, Chennai">
+  <meta property="og:description" content="Transform your fitness at S. Kolathur's premium gym. Claim your free 1-Day Trial Pass and get customized conditioning packages today.">
+  
+  <!-- Tab Icon (Pulsing Lightning Bolt Emoji SVG) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ==========================================
+       HEADER & NAVIGATION
+       ========================================== -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="#" class="logo">
+        ⚡ Sayan <span>Fitness</span>
+      </a>
+      
+      <nav class="nav-menu">
+        <a href="#" class="nav-link active">Home</a>
+        <a href="#planner" class="nav-link">Fitness Planner</a>
+        <a href="#programs" class="nav-link">Programs</a>
+        <a href="#location" class="nav-link">Studio Info</a>
+        <a href="#planner" class="btn btn-primary" style="padding: 10px 20px; font-size: 0.8rem;">Claim Free Pass</a>
+      </nav>
+      
+      <button class="menu-toggle" aria-label="Toggle Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ==========================================
+       HERO SECTION
+       ========================================== -->
+  <section class="hero-section">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <span class="section-tag">ELITE FITNESS STUDIO IN CHENNAI</span>
+        <h1>Transform Your Fitness. <br><span class="text-gradient">Own Your Strength.</span></h1>
+        <p>Break away from crowded corporate gyms. Join Kovilambakkam's premier community-focused fitness center for elite training, custom nutrition setups, and high-energy group classes.</p>
+        <div class="hero-cta">
+          <a href="#planner" class="btn btn-primary">Start Free Trial</a>
+          <a href="#programs" class="btn btn-secondary">Explore Programs</a>
+        </div>
+        
+        <div class="hero-badge-group">
+          <div class="hero-badge">
+            <span class="number">4.8★</span>
+            <span class="label">Google Rating</span>
+          </div>
+          <div class="hero-badge">
+            <span class="number">100%</span>
+            <span class="label">Local Community</span>
+          </div>
+          <div class="hero-badge">
+            <span class="number">24/7</span>
+            <span class="label">Motivation</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Interactive Calculator Card (Scaffolded Right Side of Hero) -->
+      <div id="planner" class="calculator-card glass-card">
+        <span class="section-tag">DYNAMIC PLATFORM</span>
+        <h2 class="calc-title">Interactive Fitness Planner</h2>
+        <p class="calc-subtitle">Enter your stats to instantly calculate your body targets and unlock your recommended training pass.</p>
+        
+        <div class="form-container">
+          <div class="form-row">
+            <div class="input-group">
+              <label class="input-label" for="weight">Your Weight</label>
+              <div class="input-wrapper">
+                <input class="form-control" type="number" id="weight" value="70" min="30" max="250" required>
+                <span class="input-unit">KG</span>
+              </div>
+            </div>
+            <div class="input-group">
+              <label class="input-label" for="height">Your Height</label>
+              <div class="input-wrapper">
+                <input class="form-control" type="number" id="height" value="175" min="100" max="250" required>
+                <span class="input-unit">CM</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="form-row">
+            <div class="input-group" style="grid-column: span 2;">
+              <label class="input-label" for="age">Your Age</label>
+              <input class="form-control" type="number" id="age" value="25" min="10" max="100" required>
+            </div>
+          </div>
+          
+          <div class="input-group" style="margin-bottom: 28px;">
+            <label class="input-label" style="margin-bottom: 8px;">Select Your Target Goal</label>
+            <div class="goal-selector">
+              <button class="btn-select active" data-goal="muscle">Hypertrophy</button>
+              <button class="btn-select" data-goal="loss">Fat Loss</button>
+              <button class="btn-select" data-goal="core">Core Power</button>
+              <button class="btn-select" data-goal="personal">1-on-1 VIP</button>
+            </div>
+          </div>
+          
+          <!-- Dynamic Results Area -->
+          <div class="calc-results">
+            <div class="results-grid">
+              <div class="result-box">
+                <div id="bmi-value" class="result-val">22.9</div>
+                <div id="bmi-label" class="result-label">Normal Range</div>
+              </div>
+              <div class="result-box">
+                <div id="protein-value" class="result-val">126g</div>
+                <div class="result-label">Target Protein / Day</div>
+              </div>
+            </div>
+            
+            <div class="recommendation-alert">
+              <div class="info">
+                <span class="tag">YOUR DYNAMIC MATCH</span>
+                <div id="recom-program" class="program-name">Premium Weight Training</div>
+                <div id="recom-desc" class="program-desc">Targeted hypertrophy workouts, strength routines, and form coaching.</div>
+              </div>
+              <div id="recom-icon" class="icon">🏋️</div>
+            </div>
+            
+            <!-- Floating WhatsApp URL Link -->
+            <a id="whatsapp-cta" href="#" target="_blank" class="btn cta-btn-whatsapp">
+              Claim Free Trial Pass on WhatsApp 💬
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       PROGRAMS / SERVICES SECTION
+       ========================================== -->
+  <section id="programs" class="programs-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">WHAT WE OFFER</span>
+        <h2>Programs Tailored to Your Goals</h2>
+        <p>From individual powerlifting sessions to packed fitness dance classes, find your zone at Sayan Fitness Studio.</p>
+      </div>
+      
+      <div class="programs-grid">
+        <!-- Card 1: Weight Training -->
+        <div class="program-card glass-card">
+          <div class="program-icon">🏋️</div>
+          <h3>Elite Weight Training</h3>
+          <p>Develop heavy muscle mass, power, and physical resilience using top-tier structural bars, racks, and plates.</p>
+          <ul class="program-features">
+            <li>Hypertrophy programming</li>
+            <li>Strength & endurance building</li>
+            <li>Expert structural guidance</li>
+          </ul>
+          <a href="#planner" class="btn btn-secondary">Get Recommended</a>
+        </div>
+        
+        <!-- Card 2: Core and Flexibility -->
+        <div class="program-card glass-card">
+          <div class="program-icon">🧘</div>
+          <h3>Core & Flexibility</h3>
+          <p>Strengthen spinal stabilization muscles and build excellent flexibility, reducing injury risks.</p>
+          <ul class="program-features">
+            <li>Lower back & abdominal targets</li>
+            <li>Dynamic flexibility stretching</li>
+            <li>Improved functional posture</li>
+          </ul>
+          <a href="#planner" class="btn btn-secondary">Get Recommended</a>
+        </div>
+        
+        <!-- Card 3: Zumba & Aerobics -->
+        <div class="program-card glass-card">
+          <div class="program-icon">💃</div>
+          <h3>Zumba & Aerobics</h3>
+          <p>Dance-fitness workout routines choreographing high-tempo hits with dynamic calorie-burning aerobics.</p>
+          <ul class="program-features">
+            <li>Vibrant community environment</li>
+            <li>Explosive cardiovascular burn</li>
+            <li>Fun, fat-shredding sessions</li>
+          </ul>
+          <a href="#planner" class="btn btn-secondary">Get Recommended</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       LOCATION & HOURS SECTION
+       ========================================== -->
+  <section id="location" class="location-section">
+    <div class="container location-grid">
+      <div class="studio-info">
+        <span class="section-tag">VISIT US TODAY</span>
+        <h2>Convenient Location in S. Kolathur</h2>
+        <p>We are situated in the center of Kovilambakkam, Chennai, offering easy access and secure parking spaces for all gym members.</p>
+        
+        <div class="info-cards">
+          <div class="info-card">
+            <span class="icon">📍</span>
+            <h4>Physical Address</h4>
+            <p>Dr. Ambedkar Salai, Ganganagar Extension, Behind Zone Hotel, S. Kolathur, Kovilambakkam, Chennai - 600117.</p>
+            <a href="https://www.google.com/maps/search/?api=1&query=Sayan+Fitness+Studio+Kovilambakkam+Chennai" target="_blank" style="color: var(--accent-lime); font-size: 0.85rem; font-weight: 700; text-transform: uppercase; margin-top: 8px; display: inline-flex; align-items: center; gap: 4px;">
+              Open in Google Maps 🗺️ ↗
+            </a>
+          </div>
+          <div class="info-card">
+            <span class="icon">🕒</span>
+            <h4>Operational Hours</h4>
+            <p><strong>Monday – Saturday:</strong><br>6:00 AM – 10:00 PM<br><strong>Sunday:</strong> Closed</p>
+          </div>
+          <div class="info-card">
+            <span class="icon">📞</span>
+            <h4>Phone Outreach</h4>
+            <p>Call or WhatsApp at:<br>+91 96009 84227</p>
+          </div>
+          <div class="info-card">
+            <span class="icon">🚗</span>
+            <h4>Key Landmark</h4>
+            <p>Conveniently located right at the back side of the popular Zone Hotel in S. Kolathur.</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Interactive Google Maps Frame (Styled in CSS) -->
+      <div class="map-card glass-card">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.8732128741364!2d80.1783457!3d12.915830999999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525f0e34c9c1ef%3A0xc3cf9cab6b13b84f!2sSayan%20Fitness%20Studio!5e0!3m2!1sen!2sin!4v1716447831256!5m2!1sen!2sin" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       FOOTER
+       ========================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-logo">
+          ⚡ Sayan <span>Fitness</span>
+        </div>
+        <p class="footer-tagline">Elite physical training programs and high-energy community fitness in Kovilambakkam, Chennai.</p>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2026 Sayan Fitness Studio. Crafted locally for Kovilambakkam.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================
+       STICKY FLOATING ACTIONS
+       ========================================== -->
+  <!-- Floating WhatsApp Hotkey -->
+  <a href="https://wa.me/919600984227?text=Hi%20Sayan%20Fitness%20Studio!%20I'd%20like%20to%20claim%20my%20Free%201-Day%20Trial%20Pass." target="_blank" class="whatsapp-sticky" aria-label="Chat on WhatsApp">
+    💬
+  </a>
+
+  <!-- JavaScript Application -->
+  <script src="js/app.js"></script>
+</body>
+</html>
