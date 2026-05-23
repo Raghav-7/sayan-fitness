@@ -94,6 +94,28 @@
       color: var(--accent-lime);
       font-weight: 700;
     }
+    @media (max-width: 768px) {
+      .detail-card, .detail-card.reverse {
+        grid-template-columns: 1fr;
+        padding: 24px;
+        gap: 24px;
+      }
+      .detail-icon {
+        height: 180px;
+        font-size: 4.5rem;
+      }
+      .detail-info h3 {
+        font-size: 1.6rem;
+      }
+      .detail-features {
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
+      .subpage-hero {
+        padding-top: 120px;
+        padding-bottom: 40px;
+      }
+    }
   </style>
 </head>
 <body>
